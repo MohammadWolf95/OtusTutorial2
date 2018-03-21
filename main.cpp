@@ -5,9 +5,6 @@
 #include <algorithm>
 #include <tuple>
 #include <filter.h>
-#include <filterany.h>
-#include <printv.h>
-#include <compare.h>
 
 using namespace std;
 
@@ -55,7 +52,6 @@ int main(int argc, char *argv[])
         cout<<"TODO filter by any byte and output"<<endl;
         auto vec2 = filter_any(ip_pool, 46);
         printv(vec2);
-        cout<<endl;
     }
 
     catch(const exception&e){
