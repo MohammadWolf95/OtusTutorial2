@@ -1,4 +1,5 @@
 #include <filter.h>
+#include <string>
 
 vector<vector<string>> filter_any(const vector<vector<string>>&ip_pool, int find_byte){
     vector<vector<string>>vec;
