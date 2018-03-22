@@ -47,4 +47,4 @@ include(CPack)
 
 enable_testing()
 
-add_test(test_version_valid test_main)
+#add_test(test_version_valid test_main)
