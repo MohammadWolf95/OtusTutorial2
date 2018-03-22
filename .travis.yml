@@ -3,15 +3,25 @@ compiler: clang
 dist: trusty
 sudo: required
 
+matrix:
+  include:
+    # works on Precise and Trusty
+    - os: linux
+      addons:
+        apt:
+          sources:
+            - llvm-toolchain-trusty-5.0
+          packages:
+            - clang-5.0
+      env:
+        - MATRIX_EVAL="CC=clang-5.0 && CXX=clang++-5.0"
+
 before_script:
 - sudo apt-get update -qq
 #- sudo apt-get install libboost-test-dev -y
 script:
   # Install Boost Test Framework 1.54
 - sudo apt-get install -y -qq libboost-test1.54-dev
-- wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
-- sudo apt-add-repository "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-5.0 main"
-- sudo apt-get install -y clang-5.0
 - cmake .
 - cmake --build .
 - cmake --build . --target test
