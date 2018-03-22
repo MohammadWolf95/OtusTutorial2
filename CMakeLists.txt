@@ -13,9 +13,10 @@ add_library(Filter filter.cpp)
 add_executable(test_main test_main.cpp)
 
 set_target_properties(ip_filter test_main PROPERTIES
+	CXX_STANDARD 11
 	CXX_STANDARD 14
 	CXX_STANDARD_REQUIRED ON
-	COMPILE_OPTIONS -Wpedantic -Wall -Wextra
+	COMPILE_OPTIONS -Wpedantic -Wall -Wextra -std=gnu++11 -std=gnu++14
 )
 
 set_target_properties(test_main PROPERTIES
