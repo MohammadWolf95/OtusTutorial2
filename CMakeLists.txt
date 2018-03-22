@@ -12,6 +12,8 @@ add_library(Filters filter.cpp)
 
 add_executable(test_main test_main.cpp)
 
+add_compile_options(-std=c++11)
+
 set_target_properties(ip_filter test_main PROPERTIES
 	CXX_STANDARD 14
 	CXX_STANDARD_REQUIRED ON
