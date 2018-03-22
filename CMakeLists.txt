@@ -8,7 +8,7 @@ configure_file(version.h.in version.h)
 
 add_executable(ip_filter main.cpp)
 
-add_library(Filter filter.h)
+add_library(Filters filter.h)
 
 add_executable(test_main test_main.cpp)
 
@@ -24,11 +24,11 @@ set_target_properties(test_main PROPERTIES
   INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
 )
 
-target_link_libraries(ip_filter Filter)
+target_link_libraries(ip_filter Filters)
 
 target_link_libraries(test_main
   ${Boost_LIBRARIES}
-  Filter
+  Filters
 )
 
 install(TARGETS ip_filter RUNTIME DESTINATION bin)
