@@ -9,6 +9,9 @@ before_script:
 script:
   # Install Boost Test Framework 1.54
 - sudo apt-get install -y -qq libboost-test1.54-dev
+- wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
+- sudo apt-add-repository "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-5.0 main"
+- sudo apt-get install -y clang-5.0
 - cmake .
 - cmake --build .
 - cmake --build . --target test
