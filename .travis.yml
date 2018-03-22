@@ -10,10 +10,12 @@ install:
 - sudo apt-get install -qq g++-6
 - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90
 before_script:
-- sudo apt-get install libboost-test-dev -y
+- sudo apt-get update -qq
+- cd OtusTutorial2
+#- sudo apt-get install libboost-test-dev -y
 script:
   # Install Boost Test Framework 1.54
-#- sudo apt-get install -y -qq libboost-test1.54-dev
+- sudo apt-get install -y -qq libboost-test1.54-dev
 #- cmake -DCMAKE_BUILD_TYPE=Release .
 - cmake .
 - cmake --build .

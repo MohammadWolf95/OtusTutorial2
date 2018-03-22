@@ -22,6 +22,7 @@ set_target_properties(ip_filter test_main PROPERTIES
 set_target_properties(test_main PROPERTIES
   COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
   INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
+  INCLUDE_DIRECTORIES ${SOURCE_PATH}
 )
 
 target_link_libraries(ip_filter Filters)
