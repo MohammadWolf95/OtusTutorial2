@@ -15,7 +15,7 @@ add_executable(test_main test_main.cpp)
 set_target_properties(ip_filter test_main PROPERTIES
 	CXX_STANDARD 14
 	CXX_STANDARD_REQUIRED ON
-	COMPILE_OPTIONS -Wpedantic -Wall -Wextra -std=c++11
+	COMPILE_OPTIONS -Wpedantic -Wall -Wextra
 )
 
 set_target_properties(test_main PROPERTIES
