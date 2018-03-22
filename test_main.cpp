@@ -31,7 +31,7 @@ BOOST_AUTO_TEST_CASE(Filter_1_byte){
 	vector<vector<string>> vec1 = filter(pool_ip, 1);
 
 	//сортируем результируемый вектор
-	sotr(vec1.begin(), vec1.end());
+	sort(vec1.begin(), vec1.end());
 
 	BOOST_CHECK_EQUAL(vec1, result);
 }
@@ -61,7 +61,7 @@ BOOST_AUTO_TEST_CASE(Filter_1_2_bytes){
 	vector<vector<string>> vec1 = filter(pool_ip, 100,10);
 
 	//сортируем результируемый вектор
-	sotr(vec1.begin(), vec1.end());
+	sort(vec1.begin(), vec1.end());
 
 	BOOST_CHECK_EQUAL(vec1, result);
 }
@@ -92,7 +92,7 @@ BOOST_AUTO_TEST_CASE(Filter_1_2_3_bytes){
 	vector<vector<string>> vec1 = filter(pool_ip, 7,10, 4);
 
 	//сортируем результируемый вектор
-	sotr(vec1.begin(), vec1.end());
+	sort(vec1.begin(), vec1.end());
 
 	BOOST_CHECK_EQUAL(vec1, result);
 }
@@ -121,7 +121,7 @@ BOOST_AUTO_TEST_CASE(Find_ip){
 	vector<vector<string>> vec1 = filter(pool_ip, 7, 10, 4, 1);
 
 	//сортируем результируемый вектор
-	sotr(vec1.begin(), vec1.end());
+	sort(vec1.begin(), vec1.end());
 
 	BOOST_CHECK_EQUAL(vec1, result);
 }
