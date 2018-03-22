@@ -179,7 +179,7 @@ BOOST_AUTO_TEST_CASE(Filter_any){
 	sort(result.begin(), result.end());
 
 	//проверяем нашу функцию
-	vector<vector<string>>vec1 = filter_any(ip_pool, 1);
+	vector<vector<string>>vec1 = filter_any(pool_ip, 1);
 
 	sort(vec1.begin(), vec1.end());
 
