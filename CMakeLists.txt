@@ -10,8 +10,6 @@ add_executable(ip_filter main.cpp)
 
 add_library(Filter filter.cpp)
 
-add_library(Filter filter.hpp)
-
 add_executable(test_main test_main.cpp)
 
 set_target_properties(ip_filter test_main PROPERTIES
