@@ -8,7 +8,7 @@ configure_file(version.h.in version.h)
 
 add_executable(ip_filter main.cpp)
 
-add_library(Filters filter.h)
+add_library(Filters filter.cpp)
 
 add_executable(test_main test_main.cpp)
 
