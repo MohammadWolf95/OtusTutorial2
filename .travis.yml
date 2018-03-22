@@ -1,6 +1,7 @@
 language: cpp
 compiler: clang
 dist: trusty
+sudo: required
 
 before_script:
 - sudo apt-get update -qq
