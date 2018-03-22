@@ -1,5 +1,6 @@
 #include <filter.h>
 #include <string>
+#include <sstream>
 using namespace std;
 
 vector<vector<string>> filter_any(const vector<vector<string>>&ip_pool, int find_byte){
