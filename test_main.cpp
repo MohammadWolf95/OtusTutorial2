@@ -4,6 +4,8 @@
 
 #include <boost/test/unit_test.hpp>
 
+using namespace std;
+
 BOOST_AUTO_TEST_SUITE(test_suite_main)
 
 //Тест для проверки нахождения ip адресов, у которых 1-ый байт равен 1
