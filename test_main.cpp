@@ -1,4 +1,4 @@
-#include "lib.h"
+#include "filter.h"
 
 #define BOOST_TEST_MODULE test_main 
 
