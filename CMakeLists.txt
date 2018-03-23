@@ -10,38 +10,27 @@ add_executable(ip_filter main.cpp)
 
 add_library(Filters filter.cpp)
 
-#Old
-#add_executable(test_main test_main.cpp)
+add_executable(test_main test_main.cpp)
 
 add_compile_options(-std=c++11)
 
-#Old
-#set_target_properties(ip_filter test_main PROPERTIES
-#	CXX_STANDARD 14
-#	CXX_STANDARD_REQUIRED ON
-#	COMPILE_OPTIONS -Wpedantic -Wall -Wextra
-#)
-
-#New
-set_target_properties(ip_filter PROPERTIES
+set_target_properties(ip_filter test_main PROPERTIES
 	CXX_STANDARD 14
 	CXX_STANDARD_REQUIRED ON
 	COMPILE_OPTIONS -Wpedantic -Wall -Wextra
 )
 
-#Old
-#set_target_properties(test_main PROPERTIES
-#  COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
-#  INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
-#)
+set_target_properties(test_main PROPERTIES
+  COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
+  INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
+)
 
 target_link_libraries(ip_filter Filters)
 
-#Old
-#target_link_libraries(test_main
-#  ${Boost_LIBRARIES}
-#  Filters
-#)
+target_link_libraries(test_main
+  ${Boost_LIBRARIES}
+  Filters
+)
 
 install(TARGETS ip_filter RUNTIME DESTINATION bin)
 
@@ -57,5 +46,4 @@ include(CPack)
 
 enable_testing()
 
-#Old
-#add_test(test_version_valid test_main)
+add_test(test_version_valid test_main)
